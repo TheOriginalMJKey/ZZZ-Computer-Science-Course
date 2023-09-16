@@ -11,3 +11,4 @@ Rammstain_Sonne.mp3
 
 Вывод: КИНО_Кукушка.mp3
 '''
+find . -type f -iname "*.mp3" | grep -i "КИНО" | grep -v -i "remix"
