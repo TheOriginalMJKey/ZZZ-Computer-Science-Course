@@ -3,4 +3,4 @@
 hey.uy@gmail.com
 NiceTask@gmail.com
 '''
-grep -E '*@gmail.com' personal.txt
+grep -E '[^ ]+ *@gmail.com' personal.txt
