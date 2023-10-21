@@ -21,33 +21,34 @@ int Mod(int x, int y) {
     }
 }
 
-int Pow2(int a) {
-    return ONE << a;
+int Square(int x) {
+    int result = x * x;
+    return result;
 }
 
-int Sign(int a) {
-    if (a > ZERO) {
+int Sign(int x) {
+    if (x > ZERO) {
         return 1;
-    } else if (a < ZERO) {
+    } else if (x < ZERO) {
         return MINUS_ONE;
     } else {
         return 0;
     }
 }
 
-int Max(int a, int b) {
-    if (a > b) {
-        return a;
+int Max(int x, int y) {
+    if (x > y) {
+        return x;
     } else {
-        return b;
+        return y;
     }
 }
 
-int Min(int a, int b) {
-    if (a < b) {
-        return a;
+int Min(int x, int y) {
+    if (x < y) {
+        return x;
     } else {
-        return b;
+        return y;
     }
 }
 
@@ -69,7 +70,7 @@ int Task() {
     p.x = i;
     p.y = j;
     for (int k = ONE; k <= STEPS; ++k) {
-        i = Mod((p.x * Min(p.y, l) + p.y * Min(p.x, l) + Pow2(k)), TWENTY);
+        i = Mod((p.x * Min(p.y, l) + p.y * Min(p.x, l) + Square(k)), TWENTY);
         j = Mod((Mod(p.x, TEN - k) * (Mod(p.y, TEN + k)) * (Mod(l, TEN - k))), TWENTY_FIVE);
         l = Max(Mod(Min(p.x + p.y, p.x + l), TWENTY_FIVE), Mod(Max(p.x + l, p.y + k), TWENTY)) + TEN;
         if (CheckZone(p)) {
