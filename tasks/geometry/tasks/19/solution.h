@@ -81,9 +81,9 @@ int Task() {
 
     }
     if (points_in_zone > ZERO) {
-        printf("Number of points belonging to the zone: %d\n", points_in_zone);
+        printf("Number of points belonging to the zone: %dn", points_in_zone);
     } else {
-        printf("The point didn't fall into the area beyond 50 iterations\n");
+        printf("The point didn't fall into the area beyond 50 iterations");
     }
     return 0;
 }
