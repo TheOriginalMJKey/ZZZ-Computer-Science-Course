@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdint.h>
 
 const int TEN = 10;
 const int ZERO = 0;
