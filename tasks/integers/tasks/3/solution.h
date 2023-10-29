@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdint.h>
 
 const int TEN = 10;
 const int ZERO = 0;
@@ -29,7 +30,7 @@ int MaxSum(int num) {
 }
 
 int Task() {
-    int num;
+    int num = 0;
     printf("Enter a number: ");
     scanf("%d", &num);
 
