@@ -4,28 +4,28 @@ const int TEN = 10;
 const int ZERO = 0;
 
 int MaxSum(int num) {
-    int maxSum = ZERO;
-    int currentSum = ZERO;
+    int max_sum = ZERO;
+    int current_sum = ZERO;
 
-    int firstDigit = num % TEN;
+    int first_digit = num % TEN;
     num /= TEN;
-    int secondDigit = num % TEN;
+    int second_digit = num % TEN;
     num /= TEN;
 
     while (num > ZERO) {
-        int thirdDigit = num % TEN;
+        int third_digit = num % TEN;
 
-        currentSum = firstDigit + secondDigit + thirdDigit;
-        if (currentSum > maxSum) {
-            maxSum = currentSum;
+        current_sum = first_digit + second_digit + third_digit;
+        if (current_sum > max_sum) {
+            max_sum = current_sum;
         }
 
-        firstDigit = secondDigit;
-        secondDigit = thirdDigit;
+        first_digit = second_digit;
+        second_digit = third_digit;
         num /= TEN;
     }
 
-    return maxSum;
+    return max_sum;
 }
 
 int Task() {
@@ -33,8 +33,8 @@ int Task() {
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    int maxSum = MaxSum(num);
-    printf("Maximum sum of triplets: %d\n", maxSum);
+    int max_sum = MaxSum(num);
+    printf("Maximum sum of triplets: %d\n", max_sum);
 
     return 0;
 }
