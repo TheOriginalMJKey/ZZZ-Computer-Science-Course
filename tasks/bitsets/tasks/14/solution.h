@@ -8,8 +8,7 @@ const uint8_t LENGTH = 26;
 typedef uint32_t Bitset;
 
 bool is_vowel(char letter) {
-    if (letter == 'a' || letter == 'e' || letter == 'i' ||
-        letter == 'o' || letter == 'u' || letter == 'y') {
+    if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'y') {
         return 1;
     }
     return 0;
