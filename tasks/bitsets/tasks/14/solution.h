@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>
 
 const uint8_t MAX_CONSONANTS = 20;
 const uint8_t LENGTH = 26;
