@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
-const uint8_t max_consonants = 20;
-const uint8_t length = 26;
+const uint8_t MAX_CONSONANTS = 20;
+const uint8_t LENGTH = 26;
 
 typedef uint32_t Bitset;
 
@@ -18,7 +18,7 @@ bool is_vowel(char letter) {
 
 uint32_t count_consonants(Bitset bitset) {
     uint32_t checker_counter = 0;
-    for (int i = 0; i <= length; ++i) {
+    for (int i = 0; i <= LENGTH; ++i) {
         if (bitset & (1u << i)) {
             ++checker_counter;
         }
@@ -39,7 +39,7 @@ int Task() {
         }
     }
     uint32_t checker_counter = count_consonants(bitset);
-    if (checker_counter < max_consonants) {
+    if (checker_counter < MAX_CONSONANTS) {
         printf("yes");
     } else {
         printf("no");
