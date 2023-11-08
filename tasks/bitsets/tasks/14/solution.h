@@ -7,7 +7,7 @@ const uint8_t LENGTH = 26;
 
 typedef uint32_t Bitset;
 
-bool isVowel(char letter) {
+bool IsVowel(char letter) {
     if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'y') {
         return true;
     }
@@ -32,7 +32,7 @@ int Task() {
         if (letter == EOF) {
             break;
         }
-        if (letter >= 'a' && letter <= 'z' && !isVowel(letter)) {
+        if (letter >= 'a' && letter <= 'z' && !IsVowel(letter)) {
             bitset |= (1u ^ (~(1u & (letter - 'a' + 31) % 32)));
         }
     }
