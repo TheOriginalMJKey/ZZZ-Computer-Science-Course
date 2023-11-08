@@ -10,9 +10,9 @@ typedef uint32_t Bitset;
 bool is_vowel(char letter) {
     if (letter == 'a' || letter == 'e' || letter == 'i' ||
         letter == 'o' || letter == 'u' || letter == 'y') {
-        return true;
+        return 1;
     }
-    return false;
+    return 0;
 }
 
 uint32_t count_consonants(Bitset bitset) {
