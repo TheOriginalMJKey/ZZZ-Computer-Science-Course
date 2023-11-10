@@ -24,7 +24,7 @@ uint32_t CountConsonants(Bitset bitset) {
     return checker_counter;
 }
 
-int main() {
+int Task() {
     Bitset bitset = 0;
     char letter = 0;
     while (true) {
