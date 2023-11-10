@@ -24,7 +24,7 @@ uint32_t CountConsonants(Bitset bitset) {
     return checker_counter;
 }
 
-int Task() {
+int main() {
     Bitset bitset = 0;
     char letter = 0;
     while (true) {
@@ -33,14 +33,14 @@ int Task() {
             break;
         }
         if (letter >= 'a' && letter <= 'z' && !IsVowel(letter)) {
-            bitset |= (1u ^ (~(1u & (letter - 'a' + 31) % 32)));
+            bitset |= (1u << (letter - 'a'));
         }
     }
     uint32_t checker_counter = CountConsonants(bitset);
     if (checker_counter < MAX_CONSONANTS) {
-        printf("yes");
+        printf("Yes");
     } else {
-        printf("no");
+        printf("No");
     }
     return 0;
 }
