@@ -37,7 +37,6 @@ long double AltSign(int64_t num) {
 
 long double Pow(long double base, int64_t power) {
     long double res = 1;
-    int64_t counter = 0;
     if (power < 0) {
         return -1;
     } else if (power == 0) {
