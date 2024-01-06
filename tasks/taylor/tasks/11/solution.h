@@ -56,12 +56,15 @@ long double Pow(long double base, int64_t power) {
 
 int64_t Factorial(int64_t left, int64_t right) {
     int64_t res = 1;
-    if (left > right)
+    if (left > right) {
         return res;
-    if (left == right)
+    }
+    if (left == right) {
         return left;
-    if (right - left == 1)
+    }
+    if (right - left == 1) {
         return left * right;
+    }
     int64_t middle = (left + right) / 2;
     return Factorial(left, middle) * Factorial(middle + 1, right);
 }
