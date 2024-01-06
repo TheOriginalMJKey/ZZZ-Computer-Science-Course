@@ -7,28 +7,28 @@
 
 #define _USE_MATH_DEFINES
 
-double function(double x) {
+double Function(double x) {
     return cos(x) - pow(M_E, (pow(x, 2) / -2)) + x - 1;
 }
 
-double func(double x) {
+double Func(double x) {
     return 1 - x + sin(x) - log(1 + x);
 }
 
-double simple_iterations(double a, double b, double tol) {
+double SimpleIterations(double a, double b, double tol) {
     double x = a;
-    double y = func(a);
-    double x1;
-    double y1;
+    double y = Func(a);
+    double x1 = 0;
+    double y1 = 0;
 
-    if (y * func(b) > 0) {
+    if (y * Func(b) > 0) {
         printf("Root does not lie between %f and %f\n", a, b);
         return -1;
     }
 
     while (fabs(y) > tol) {
         x1 = x - y / ((1 - x) + sin(x) - (1 + x) / (1 + x));
-        y1 = func(x1);
+        y1 = Func(x1);
 
         if (fabs(y1) <= tol) {
             return x1;
@@ -41,15 +41,15 @@ double simple_iterations(double a, double b, double tol) {
     return x;
 }
 
-double dichotomy(double left, double right, double eps) {
+double Dichotomy(double left, double right, double eps) {
     double mid = (left + right) / 2;
 
-    if (fabs(function(mid)) <= eps) {
+    if (fabs(Function(mid)) <= eps) {
         return mid;
-    } else if (function(left) * function(mid) < 0) {
-        return dichotomy(left, mid, eps);
+    } else if (Function(left) * Function(mid) < 0) {
+        return Dichotomy(left, mid, eps);
     } else {
-        return dichotomy(mid, right, eps);
+        return Dichotomy(mid, right, eps);
     }
 }
 
@@ -61,9 +61,9 @@ int Task() {
     double a = 1;
     double b = 1.5;
 
-    printf("The root of the equation using dichotomy method is %.6f\n", dichotomy(left, right, eps));
+    printf("The root of the equation using Dichotomy method is %.6f\n", Dichotomy(left, right, eps));
 
-    printf("The root of the equation using iterations method if %.6f\n", simple_iterations(a, b, eps));
+    printf("The root of the equation using iterations method if %.6f\n", SimpleIterations(a, b, eps));
 
     return 0;
 }
