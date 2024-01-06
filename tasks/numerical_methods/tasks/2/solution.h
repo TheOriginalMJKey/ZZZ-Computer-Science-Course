@@ -20,6 +20,7 @@ double SimpleIterations(double a, double b, double tol) {
     double y = Func(a);
     double x1 = 0;
     double y1 = 0;
+    int count = 0;
 
     if (y * Func(b) > 0) {
         printf("Root does not lie between %f and %f\n", a, b);
@@ -36,6 +37,11 @@ double SimpleIterations(double a, double b, double tol) {
 
         x = x1;
         y = y1;
+
+        count += 1;
+        if (count > 10000) {
+            break;
+        }
     }
 
     return x;
