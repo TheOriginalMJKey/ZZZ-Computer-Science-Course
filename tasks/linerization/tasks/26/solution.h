@@ -68,6 +68,6 @@ int Task() {
             break;
         }
     }
-    printf("\n\n");
+    printf("\n \n");
     return 0;
 }
