@@ -45,7 +45,7 @@ long double Pow(long double base, int64_t power) {
     } else {
         while (power != 0) {
             if (power % 2 == 1) {
-                res*= base;
+                res *= base;
             }
             power /= 2;
             base *= base;
@@ -59,7 +59,7 @@ int64_t Factorial(int64_t left, int64_t right) {
     if (left > right)
         return res;
     if (left == right)
-         return left;
+        return left;
     if (right - left == 1)
         return left * right;
     int64_t middle = (left + right) / 2;
@@ -73,8 +73,8 @@ long double Taylor(long double x, int64_t* iteration_counter) {
     while (!Equals(portion, 0) && (*iteration_counter <= 101)) {
         result += portion;
         ++(*iteration_counter);
-        portion = AltSign(*iteration_counter) * (2 * (*iteration_counter) * (*iteration_counter) + 1)
-         / Factorial(1, 2 * (*iteration_counter)) * Pow(x, 2 * (*iteration_counter));
+        portion = AltSign(*iteration_counter) * (2 * (*iteration_counter) * (*iteration_counter) + 1) /
+                  Factorial(1, 2 * (*iteration_counter)) * Pow(x, 2 * (*iteration_counter));
     }
     return result;
 }
@@ -97,7 +97,7 @@ int Task() {
     scanf("%ld", &iterations_number);
     step = (RIGHT_BORDER - LEFT_BORDER) / (iterations_number);
     printf("| %7s | %17s | %17s | %3s |\n", "x", "Taylor series", "True function", "Iterations number");
-    for(long double x = LEFT_BORDER; x <= RIGHT_BORDER + step; x += step) {
+    for (long double x = LEFT_BORDER; x <= RIGHT_BORDER + step; x += step) {
         taylor_result = Taylor(x, &iterations_counter);
         PrintLine(x, taylor_result, Function(x), iterations_counter);
     }
