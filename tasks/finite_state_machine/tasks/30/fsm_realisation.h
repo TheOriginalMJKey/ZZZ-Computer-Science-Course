@@ -17,7 +17,7 @@ StateMachine* MakeStateMachine() {
 }
 
 // Function to perform state transitions
-int Step(StateMachine* sm, char c) {
+int Step(StateMachine* sm, int c) {
     StateName next = sm->pipeline[(int)sm->current_state].action(sm);
     sm->current_char = c;
     if (next == END) {
