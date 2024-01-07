@@ -27,9 +27,9 @@ void IterationsMethod(double x_0, double (*func_iterations)(double x)) {
         x_next = func_iterations(x_next);
     }
     printf(
-            "For x = %lf, the function x * x - log(1 + x) - 3 is not defined, since the sub-log expression is < 0,\n"
-            "therefore, there is no solution using this method.\n\n",
-            x);
+        "For x = %lf, the function x * x - log(1 + x) - 3 is not defined, since the sub-log expression is < 0,\n"
+        "therefore, there is no solution using this method.\n\n",
+        x);
 }
 
 double DerivativeNewton(double x) {
