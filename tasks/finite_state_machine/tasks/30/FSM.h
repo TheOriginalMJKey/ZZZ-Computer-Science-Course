@@ -16,7 +16,7 @@ int Task() {
             break;
         }
     }
-  printf("\nEND\n");
+    printf("\nEND\n");
     fclose(file);
     DeleteStateMachine(sm);
     return 0;
