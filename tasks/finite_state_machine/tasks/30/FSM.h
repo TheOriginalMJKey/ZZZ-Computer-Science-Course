@@ -9,7 +9,7 @@ int Task() {
     */
     FILE* file = fopen("../tasks/finite_state_machine/tasks/30/input.txt", "r");
     StateMachine* sm = MakeStateMachine();
-    char c = 0;
+    char c = ' ';
     printf("START\n");
     while (!feof(file)) {
         char c = fgetc(file);
