@@ -9,7 +9,7 @@
 
 // Function to check if number is less than INT_MAX
 bool CheckNumberValue(int number) {
-    return number < INT_MAX;
+    return number < INT_MAXS;
 }
 
 // Functions for each state
