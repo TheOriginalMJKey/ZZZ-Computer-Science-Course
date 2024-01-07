@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-const int INT_MAX = 99;
+const int INT_MAXS = 99;
 
 typedef enum {
     FIND_NUMBER,
