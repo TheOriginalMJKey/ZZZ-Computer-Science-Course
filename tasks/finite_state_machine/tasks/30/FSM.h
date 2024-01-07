@@ -7,9 +7,6 @@ int Task() {
     Regular expression for decimal numbers: ^[0-9]+$
     Test: Only one of the numbers 99 and 23 will be in the output. -> 23
     */
-    file = nullptr;
-    sm = nullptr;
-    char c = 0;
     FILE* file = fopen("../tasks/finite_state_machine/tasks/30/input.txt", "r");
     StateMachine* sm = MakeStateMachine();
     printf("START\n");
