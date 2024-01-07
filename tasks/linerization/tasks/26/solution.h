@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 void Left(int *x, int *y, int *posx, int *posy, int mtr[4][4]) {
-    for (int i = 0; i < *x; i++) {
+    for (int i = 0; i < *x; ++i) {
         *posx -= 1;
         printf("%d ", mtr[*posy][*posx]);
     }
