@@ -11,7 +11,7 @@ int Task() {
     StateMachine* sm = MakeStateMachine();
     printf("START\n");
     while (!feof(file)) {
-        char c = fgetc(file);
+        int c = fgetc(file);
         if (Step(sm, c) == 1) {
             break;
         }
