@@ -9,15 +9,15 @@ int Task() {
     */
     FILE* file = fopen("../tasks/finite_state_machine/tasks/30/input.txt", "r");
     StateMachine* sm = MakeStateMachine();
-    char c = ' ';
     printf("START\n");
-    while (!feof(file)) {
-        char c = fgetc(file);
-        if (Step(sm, c) == 1) {
+    int k = 0;
+    while (true) {
+        k = Step(sm, (char)fgetc(file));
+        if (k) {
+            printf("\nEND\n");
             break;
         }
     }
-    printf("\nEND\n");
     fclose(file);
     DeleteStateMachine(sm);
     return 0;
