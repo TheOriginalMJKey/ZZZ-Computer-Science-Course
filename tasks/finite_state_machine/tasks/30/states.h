@@ -61,9 +61,9 @@ StateName CompareValues(StateMachine* sm) {
 State* MakeStates() {
     State* states = (State*)malloc(sizeof(State) * COUNT);
     StateName (*actions[END])(StateMachine*) = {&FindNumber, &ValueForming, &CompareValues};
-    for (int i = 0; i < END; ++i) {
-        states[i].name = (StateName)i;
-        states[i].action = actions[i];
+    for (int a = 0; a < END; ++a) {
+        states[a].name = (StateName)a;
+        states[a].action = actions[a];
     }
     return states;
 }
