@@ -1,1 +1,1 @@
-Only one of numbers 99 and 0 are going to be in the output.
+Only one of numbers 99 and 23 are going to be in the output.
